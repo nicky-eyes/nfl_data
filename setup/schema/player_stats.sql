@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS player_stats (
     season                      INT NOT NULL,
     week                        INT NOT NULL,
     season_type                 VARCHAR(10) NOT NULL,
+    game_id                     VARCHAR(30),
     team                        VARCHAR(5),
     opponent_team               VARCHAR(5),
     -- Passing
