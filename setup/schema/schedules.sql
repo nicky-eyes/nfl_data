@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS schedules (
     week                INT NOT NULL,
     gameday             VARCHAR(15) NOT NULL,
     weekday             VARCHAR(15) NOT NULL,
-    gametime            VARCHAR(10) NOT NULL,
+    gametime            VARCHAR(10),
     away_team           VARCHAR(5) NOT NULL,
     away_score          INT,
     home_team           VARCHAR(5) NOT NULL,
