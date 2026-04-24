@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS players (
     height              REAL,
     weight              REAL,
     birth_date          VARCHAR(20),
-    college_name        VARCHAR(100),
+    college_name        VARCHAR(150),
     college_conference  VARCHAR(100),
     rookie_season       INT NOT NULL,
     last_season         INT NOT NULL,
