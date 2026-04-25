@@ -44,7 +44,7 @@ Per-player, per-week statistics. Composite primary key on `(player_id, season, w
 
 ## Design Decisions
 
-A handful of small choices that shaped the project. I called these out because they're the kind of small reasoned trade-offs that compound across a real codebase.
+A handful of small choices that shaped the project.
 
 - **Idempotent upserts via `INSERT ... ON CONFLICT`.** Every loader is safe to re-run. Re-running refreshes data (scores after games complete, betting lines as they move) instead of erroring or duplicating.
 - **`execute_values` with `page_size=1000` for batch inserts.** Row-by-row inserts on 475K rows are pathologically slow. Batch inserts run the same load in seconds.
